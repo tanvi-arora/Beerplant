@@ -1,16 +1,21 @@
 ---
-title: "Calling markdown"
-author: "Tanvi Arora"
+title: "US Brewery Analysis"
+author: "Tanvi Arora, Anne Francomano, Anjli Solsi, Rebecca Holsapple"
 date: "June 24, 2018"
 output: html_document
 ---
 
 ```{r setup, include=TRUE}
 knitr::opts_chunk$set(echo = TRUE, cache = FALSE)
+#
 library(knitr)
+#ensure that ggplot2 is loaded
+library(ggplot2)
 read_chunk('Code/load_dataset.R')
 read_chunk('Code/Merge_Beers_Breweries.R')
-read_chunk('Code/ABV_vs_IBU.R')
+read_chunk('Code/BreweryCountByState.R')
+read_chunk('Code/SummaryStatisticsForABV.R')
+#read_chunk('Code/ABV_vs_IBU.R')
 ```
 
 ```{r loaddataset, warning=FALSE}
@@ -18,6 +23,15 @@ read_chunk('Code/ABV_vs_IBU.R')
 
 ```{r mergedatasets, warning = FALSE}
 ```
+
+## Brewery Counts By State
+```{r countbystate, warning = FALSE}
+```
+
+## Summary Statistics For ABV
+```{r summarystatsabv, warning = FALSE}
+```
+
 
 ## Median of ABV vs IBU per state
 ```{r, warning=FALSE}
