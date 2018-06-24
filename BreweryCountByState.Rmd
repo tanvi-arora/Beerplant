@@ -1,5 +1,5 @@
 ---
-title: "Doing Data Science - section 403 - Case Study 1"
+title: "US Breweries by State - for Client Brewery Analysis"
 author: "AFrancomano"
 date: "June 19, 2018"
 output: 
@@ -7,23 +7,12 @@ output:
     keep_md: true
 ---
 
-## Introduction
-Steeped in a tradition of innovation for the past 150 years, the family-owned De Halve Maan brewery in Bruges, Belgium, is keen to expand its presence into the U.S. market.  Our team is assisting management with determining if there is a particular U.S. location (e.g. state or region) that would present an opportunity.  
-
-Phase One of the analysis process assesses the geographical locations and products of the established U.S. breweries.
-
-
-.. characteristics of its own products, general and specific measures, i.e. ABV ..   differentiate from those already offered by the U.S. breweries.
-
-... 
-
-
-## Question 1: Brewery Count by State
+## Brewery Count by US State
 
 As part of evaluating geographic locations, Halv de Maan needs to know at a minimum how many U.S. breweries there are by state. 
 ...Include graphics here..
 ...Add data summarize by region ..  west, central, south, northeast
-
+...??  what are the findings based on this part??
 
 ```{r echo=TRUE}
 #a. Bring Breweries.txt into R   
@@ -48,10 +37,11 @@ dim(USbrewsByState)
 
 #barchart
 par(las=2)
-barplot(USbrewsByState, main = "Brewery Count by US State", xlab="Count", ylab="State", col="lightseagreen", horiz=TRUE)
+barplot(USbrewsByState, main = "Brewery Count by US State- THIS IS TOO HARD TO READ", xlab="Count", ylab="State", col="lightseagreen", horiz=TRUE)
 
-#what are the top 10 states with the most number of breweries 
-#SortDescByCount <- final[order(-final$Total),]   
+# this needs to be run on the MERGED Beer and Brewery dataset
+#The top 10 states with the most number of breweries 
+#SortDescByCount <- MergedData[order(-MergedData$Total),]   
 #SortDescByCount[1:10, "State",] 
 
 
@@ -67,32 +57,8 @@ WestVector <- c("CA","WA")
 
 USbrews$Region [is.element(USbrews$State, NorthEastVector)]  <- "NE" 
 
+#Generate graphs by regions.. 
 
-
-# Will we need to merge these files according to Brewery_ID field ....
-#final <- merge (y2015, y2016, by=c("FirstName","Gender"))
-                
 ```
 
-
-## Question 5: Beer ABV Measure - Summary Statistics
-```{r echo=TRUE}
-##a. Bring Beers.csv into R   
-USbeers <- read.csv("beers.csv", header = TRUE)          #Read in the beers datafile
-dim(USbeers)
-
-#b. 
-summary(USbeers$ABV)
-                
-```
-
-## Analysis Conclusion
-
-conclusion here...
-
-Suggested next steps for analysis.. take into consideration population to possible support another brewery in the potential areas of interest..
-
-## Reference information, GitHub links, etc.
-
-***THE GITHUB LINK IS  https://github.com/afrancomano/MSDSHomeWork5
 
