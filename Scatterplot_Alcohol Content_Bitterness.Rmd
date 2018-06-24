@@ -1,0 +1,24 @@
+---
+title: "Scatterplot_Bitterness vs Alcohol Content"
+author: "Rebecca Holsapple"
+date: "June 23, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Scatterplot 
+```{r}
+# Read in data
+ beer <- read.csv('Data/Beers.csv', header=TRUE)
+ 
+# Scatterplot
+ plot(Beers$ABV, Beers$IBU, xlab = "Alcohol Content", ylab = "Bitterness of Beer")
+ 
+# linear regression model
+ abline(lm(Beers$IBU ~ Beers$ABV))
+
+
+```
