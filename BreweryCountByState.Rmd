@@ -12,7 +12,7 @@ output:
 As part of evaluating geographic locations, Halv de Maan needs to know at a minimum how many U.S. breweries there are by state. 
 ...Include graphics here..
 ...Add data summarize by region ..  west, central, south, northeast
-...??  what are the findings based on this part??
+...??  what are the findings based on this part    ??
 
 ```{r echo=TRUE}
 #a. Bring Breweries.txt into R   
