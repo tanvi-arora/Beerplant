@@ -1,0 +1,28 @@
+---
+title: "Calling markdown"
+author: "Tanvi Arora"
+date: "June 24, 2018"
+output: html_document
+---
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE, cache = FALSE)
+library(knitr)
+read_chunk('Code/load_dataset.R')
+read_chunk('Code/ABV_vs_IBU.R')
+```
+
+```{r loaddataset, warning=FALSE}
+```
+
+```{r merge_beer_state, warning = FALSE}
+```
+
+## Median of ABV vs IBU per state
+```{r medianABVIBU, warning=FALSE}
+```
+
+
+## Plot of ABV vs State and IBU vs State
+```{r barplotABVIBU}
+```
