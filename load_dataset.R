@@ -1,8 +1,7 @@
 ## This script loads input dataset
 ## load Dataset - Beers.csv 
 
-#getwd()
-## @knitr loaddataset
+getwd()
 beer <- read.csv('Data/Beers.csv', header=TRUE)
 
 ##structure of beer dataset
@@ -15,12 +14,12 @@ summary(beer)
 
 ## load Dataset - Brewries.csv
 
-breweries <- read.csv('Data/Breweries.csv', header=TRUE)
+breweies <- read.csv('Data/Breweries.csv', header=TRUE)
 
 ##structure of breweries dataset
 
-str(breweries)
+str(breweies)
 
 ## summary of breweies dataset
 
-summary(breweries)
+summary(breweies)
