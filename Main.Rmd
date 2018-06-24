@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r setup, include=TRUE}
-knitr::opts_chunk$set(echo = TRUE, cache = FALSE)
+knitr::opts_chunk$set(echo = TRUE, cache = FALSE , warning=FALSE)
 #
 library(knitr)
 #ensure that ggplot2 is loaded
@@ -15,7 +15,8 @@ read_chunk('Code/load_dataset.R')
 read_chunk('Code/Merge_Beers_Breweries.R')
 read_chunk('Code/BreweryCountByState.R')
 read_chunk('Code/SummaryStatisticsForABV.R')
-#read_chunk('Code/ABV_vs_IBU.R')
+read_chunk('Code/Compare_ABV_IBU.R')
+read_chunk('Code/Max_ABV_IBU_State.R')
 ```
 
 ```{r loaddataset, warning=FALSE}
@@ -34,10 +35,14 @@ read_chunk('Code/SummaryStatisticsForABV.R')
 
 
 ## Median of ABV vs IBU per state
-```{r, warning=FALSE}
+```{r medianABVIBU, warning = FALSE}
 ```
 
 
 ## Plot of ABV vs State and IBU vs State
-```{r}
+```{r barplotABVIBU, warning = FALSE}
+```
+
+## State with maximum ABV and IBU
+```{r maxABV_IBU_state, warning = FALSE}
 ```
