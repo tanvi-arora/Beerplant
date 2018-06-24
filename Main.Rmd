@@ -17,6 +17,7 @@ read_chunk('Code/BreweryCountByState.R')
 read_chunk('Code/SummaryStatisticsForABV.R')
 read_chunk('Code/Compare_ABV_IBU.R')
 read_chunk('Code/Max_ABV_IBU_State.R')
+read_chunk('Code/Scatterplot_ABV_IBU.R')
 ```
 
 ```{r loaddataset, warning=FALSE}
@@ -45,4 +46,8 @@ read_chunk('Code/Max_ABV_IBU_State.R')
 
 ## State with maximum ABV and IBU
 ```{r maxABV_IBU_state, warning = FALSE}
+```
+
+## Scatterplot ABV and IBU
+```{r scatterplotabvibu, warning = FALSE}
 ```
