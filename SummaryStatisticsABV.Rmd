@@ -8,14 +8,15 @@ output: html_document
 ## Beer ABV Measure - Summary Statistics
 ```{r echo=TRUE}
 ##a. Bring Beers.csv into R   
-USbeers <- read.csv("beers.csv", header = TRUE)          #Read in the beers datafile
-dim(USbeers)                          #Confirm row and column count
+USBeers <- read.csv("beers.csv", header = TRUE)          #Read in the beers datafile
+dim(USBeers)                          #Confirm row and column count
 
 #b. 
-ABVSummary <-summary(USbeers$ABV)
+ABVSummary <-summary(USBeers$ABV)
 ABVSummary[4]    # get the MEAN ABV
 ABVSummary[3]    # get the MEDIAN ABV
 ABVSummary[2]    # get the 1st Quartile
 ABVSummary[5]    # get the 3rd Quartile
+
 
 ```
