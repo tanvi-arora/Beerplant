@@ -14,12 +14,12 @@ summary(beer)
 
 ## load Dataset - Brewries.csv
 
-breweies <- read.csv('Data/Breweries.csv', header=TRUE)
+breweries <- read.csv('Data/Breweries.csv', header=TRUE)
 
 ##structure of breweries dataset
 
-str(breweies)
+str(breweries)
 
 ## summary of breweies dataset
 
-summary(breweies)
+summary(breweries)
