@@ -17,9 +17,6 @@ beer <- read.csv('Data/Beers.csv', header=TRUE)
 
 str(beer)
 
-## summary of Beer dataset
-
-summary(beer)
 
 ## load Dataset - Brewries.csv
 
@@ -29,6 +26,3 @@ breweries <- read.csv('Data/Breweries.csv', header=TRUE)
 
 str(breweries)
 
-## summary of breweies dataset
-
-summary(breweries)
