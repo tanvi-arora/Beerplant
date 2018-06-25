@@ -8,8 +8,11 @@
 
 ## @knitr scatterplotabvibu
 
-# Scatterplot
-plot(beer.breweries.state.clean$ABV, beer.breweries.state.clean$IBU, xlab = "Alcohol Content", ylab = "Bitterness of Beer")
+# Scatterplot of Beer Bitterness vs Alcohol Content
 
-# linear regression model
-abline(lm(beer.breweries.state.clean$IBU ~ beer.breweries.state.clean$ABV))
+ggplot(beer.breweries.state.clean, aes(beer.breweries.state.clean$ABV, beer.breweries.state.clean$IBU)) +
+  geom_point(shape=18, color="maroon4")+
+  geom_smooth(method=lm,  linetype="dashed", color="darkred", fill="blue") +
+  scale_color_gradient() +
+  theme_bw() +
+  ggtitle("Scatterplot Beer Bitterness vs Alcohol Content") + ylab("Bitterness of Beer")   + xlab("Alcohol Content")
