@@ -11,6 +11,7 @@ knitr::opts_chunk$set(echo = TRUE, cache = FALSE , warning=FALSE)
 library(knitr)
 #ensure that ggplot2 is loaded
 library(ggplot2)
+library(scales)
 read_chunk('Code/load_dataset.R')
 read_chunk('Code/Column_NAs.R')
 read_chunk('Code/Merge_Beers_Breweries.R')
