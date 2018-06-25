@@ -8,11 +8,13 @@
 
 ## @knitr scatterplotabvibu
 
-# Scatterplot of Beer Bitterness vs Alcohol Content
+# Scatterplot of IBU vs ABV Percent, with Customer Median Reference Point (red), and a linar model and confidence interval
 
 ggplot(beer.breweries.state.clean, aes(beer.breweries.state.clean$ABV, beer.breweries.state.clean$IBU)) +
   geom_point(shape=18, color="maroon4")+
-  geom_smooth(method=lm,  linetype="dashed", color="darkred", fill="blue") +
+  geom_point(aes(x= .0825, y = 32.5), color="red", size = 5)+
+  geom_smooth(method=lm,  linetype="dashed", color="forestgreen", fill="darkblue") +
   scale_color_gradient() +
   theme_bw() +
-  ggtitle("Scatterplot Beer Bitterness vs Alcohol Content") + ylab("Bitterness of Beer")   + xlab("Alcohol Content")
+  scale_x_continuous(label=percent) +
+  ggtitle("US IBU vs ABV%, with Customer Median Reference point (red)") + ylab("Bitterness of Beer(IBU)") + xlab("Alcohol Content Percent (ABV%)")
