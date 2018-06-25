@@ -1,9 +1,12 @@
-#input, output, purpose
-#add header 
+################################################################
+## R code for reporting the number of NAs in each column of the individual beer and breweries datasets
+## Author : Anjli Solsi
+## Created Date : 06/24/2018
+## This script counts and reports the number of NAs in each column of the individual beer and breweries datasets.
+## 
+################################################################
 
-
-# Report the number of NA's in each column.
-
+## @knitr columnNAs
 
 #change column names 
 colnames(beer) <- c("Beer_Name", "Beer_ID", "ABV", "IBU", "Brewery_ID", "Style", "Ounces")
@@ -11,9 +14,19 @@ colnames(breweries) <- c("Brewery_ID", "Brewery_Name", "Brewery_City", "Brewery_
 str(beer)
 str(breweries)
 
-#merge beer dataset and breweries dataset
-beer_breweries <- merge(beer, breweries, by=c("Brewery_ID"), all=TRUE)
-str(beer_breweries)
+#report number of NAs in beer and breweries dataset
+colSums(is.na(beer))
+colSums(is.na(breweries))
+#which is used to identify the records with blank values for the variable Style in the beer dataset
+beer[which(beer$Style==''),]
 
-# report number of NAs in each column 
-colSums(is.na(beer_breweries))
+#merge beer dataset and breweries dataset
+##beer.breweries <- merge(beer, breweries, by=c("Brewery_ID"), all=TRUE)
+
+#validate merged dataset 
+##str(beer.breweries)
+##dim(beer.breweries)
+
+#report number of NAs in each column of merged dataset
+##colSums(is.na(beer_breweries))
+
