@@ -50,9 +50,9 @@ Perform analysis on the US Breweries by regions
 
 Authors :
 
-Anne Francomano 
-Anjli Solsi 
-Rebecca Holsapple 
-Tanvi Arora 
+Anne Francomano  
+Anjli Solsi  
+Rebecca Holsapple  
+Tanvi Arora  
 
 
