@@ -4,6 +4,10 @@ author: "Tanvi Arora, Anne Francomano, Anjli Solsi, Rebecca Holsapple"
 date: "June 24, 2018"
 output: html_document
 ---
+#Introduction
+Steeped in a tradition of innovation for the past 150 years, the family-owned De Halve Maan brewery in Bruges, Belgium, is keen to expand its presence into the U.S. market.  Our team is assisting management with determining if there is a particular U.S. location (e.g. state) that would present an opportunity.  
+
+Here, in phase one of the investigation, we look at two key beer product line characteristics of interest: the Alcohol Content by Volume (ABV) and the International Bittering Units scale (IBU) rating. Note that IBU metric is equivalent to the European Measurement of Bitterness (EBU). The difference between EBU and IBU is negligible (See Alworth, Jeff (2015) The Beer Bible: The Essential Beer Lover’s Guide. New York, NY: Workman Publishing, page 8. https://www.amazon.com/Beer-Bible-Jeff-Alworth/dp/0761168117). Therefore, the EBU ratings of De Halve Maan's products that have been provided by our client contact, were compared directly to the IBU ratings of the US breweries' beers.
 
 ```{r setup, include=TRUE}
 knitr::opts_chunk$set(echo = TRUE, cache = FALSE , warning=FALSE)
@@ -11,7 +15,6 @@ knitr::opts_chunk$set(echo = TRUE, cache = FALSE , warning=FALSE)
 library(knitr)
 #ensure that ggplot2 is loaded
 library(ggplot2)
-library(scales)
 read_chunk('Code/load_dataset.R')
 read_chunk('Code/Column_NAs.R')
 read_chunk('Code/Merge_Beers_Breweries.R')
@@ -22,39 +25,64 @@ read_chunk('Code/Max_ABV_IBU_State.R')
 read_chunk('Code/Scatterplot_ABV_IBU.R')
 ```
 
+#Data Source
+The two data sets utilized in the analyses were obtained from iBeverage, Inc., in NY. One data set listed 558 breweries encompassing all 51 US states. The second data set reflects all 2410 beers brewed by each US brewery in the first data set. In order to perform a portion of the analysis it was necessary to merge the two data sets.  
+
+
 ```{r loaddataset, warning=FALSE}
 ```
 
-##NAs in Each Dataset
+#Missing Values
+Once the data was obtained and reviewed for completeness, it was determined that out of all 2410 US beers, 3%  were missing the ABV measure, 42% were missing the IBU measure, 0.02% were missing Style information.  As requested by De Halve Maan, missing data was ignored and the analysis was performed on the available information.
+
 ```{r columnNAs, warning=FALSE}
 ```
 
-##Merge Beer and Breweries Datasets
+#####Merge Beer and Breweries Datasets
 ```{r mergedatasets, warning = FALSE}
 ```
 
-## Brewery Counts By State
+#US Brewery Presence By State
+Typically, those states with the larger number of breweries will present a more challenging market to penetrate. It is wise to look at both saturated and unsaturated geographical locations. The four states with the largest number of breweries are Colorado (47), California (39), Michigan(32) and Oregon(29), while the four states with only one brewery apiece are District of Columbia, North Dakota, South Dakota and West Virginia.  Even though the market might seem geographically saturated, the De Halve Maan beer may offer a unique experience.
+
 ```{r countbystate, warning = FALSE}
 ```
 
-## Summary Statistics For ABV
+## Characteristics:   ABV and IBU
+Comparing the ABV and IBU characteristics of De Halve Maan's product line to that of beers in prospective US markets will help narrow down potential clientele who may have a higher likelihood of trying the new international products because doing so would not be a drastic change from their usual drink of choice. 
+
+## ABV
+The mean and median ABV for De Halve Maan's product line are both approximately 8%, while that of the US breweries are both approximately 6%. While 33% greater median alcohol content is one factor that could work toward setting the De Halve Maan product line apart from US competitors, verification of the maximum legal alcohol content limit for import and resale is necessary with respect to each US state as well. Please reference bar chart below showing Median ABV by US State. Note that the De Halve Maan's product line well exceeds the US breweries' maximum median by state of approximately 6.3%.
+
 ```{r summarystatsabv, warning = FALSE}
 ```
 
-
-## Median of ABV vs IBU per state
+## IBU
+An individual beer's IBU contributes to its unique taste and depth. Although there may be more competition in areas that sell similar IBU levels, this may reflect the population at large being attracted to that specific quality of beer. Based on the below chart showing Median IBU by US State, De Halve Maan's median IBU of 32.5 falls approximately in the middle of the US breweries.
 ```{r medianABVIBU, warning = FALSE}
 ```
-
-
-## Plot of ABV vs State and IBU vs State
+***BOTH CHART LABELS and TITLES SHOULD be  MEDIAN 
+## Plots:   Median ABV by State   and Median IBU by State
 ```{r barplotABVIBU, warning = FALSE}
 ```
 
-## State with maximum ABV and IBU
+## States with maximum ABV and IBU
+While Colorado has the maximum ABV of 12.8%, exceeding that of De Halve Maan's, it may be due local, within-state micro-brewing allowing for higher ABV, than would apply to other beers, such as out-of-state and imports.
+Since Oregon has the maximum IBU of 138, far exceeding De Halve Maan's, there is no concern that the imported Belgian beer would be too extreme than other available options. 
+
 ```{r maxABV_IBU_state, warning = FALSE}
 ```
 
-## Scatterplot ABV and IBU
+## Scatterplot of IBU vs ABV% for US Breweries, with De Halve Maan Median Reference Point
+Based on the below scatterplot of IBU vs ABV% for all US breweries, there seems to be a general positive relationship between the two characteristics.
+The reference point (in red) represents the plot of the median ABV% and IBU across all eight of De Halve Maan's beers. The Belgian product line characteristics seem to fall within the range of the current US beer production. and it not an outlier.
+
 ```{r scatterplotabvibu, warning = FALSE}
 ```
+
+#Conclusion and Recommendations
+Given that the analysis was only able to use the relatively small sample of IBU data available, decisions based on this information should be made with discretion. In general, based on the above observations, if De Halve Maan decides to expand their overseas market into the United States, consumers would mostly likely welcome it, as the characteristics of the beers do not seem to deviate from the typical range of choices currently available in the United States. 
+
+Recommendations for phase two of the analysis, include investigating US regional characteristics and seasonal considerations.  Introducing the product line to a region instead of individual states in various parts of the country could be a more cost effective approach.  In addition, coordinating promotional events in conjuction with regional introduction would enable the De Halve Maan sales team to focus on targeted efforts and minimize travel costs. On a single transatlantic trip the team could visit multiple locations for special events such as the US Oktoberfests held from late August through October.
+
+The team looks forward to working with De Halve Maan on future analysis.  Thank you.
