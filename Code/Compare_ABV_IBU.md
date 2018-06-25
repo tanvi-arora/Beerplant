@@ -25,20 +25,20 @@ R package used is ggplot2
 1. Barplot to map states to its median ABV% value stored in beer.stateABV
 2. Barplot to map states to its median IBU value stored in beer.stateIBU
 
-*Parameters of plot :*
-    1. ggplot  
-        1. source dataset - beer.stateABV 
-        2. variables used - Brewery_State , ABV_per 
-        3. ordered by ABV_per using reorder  
-    2. geom_bar - plots a barplot 
-        1. stat = identity : uses datavalues as visual values 
-        2. fill = color used to fill the bar plot 
-        3. width = width of the bars 
-    3. coord_flip - owing to the large number of states( 50), flipped the plot to put the group on y-axis and plot the bars horizontally 
-    4. theme_bw() - bw theme allows to create a white background and use black boxes around the graph 
-    5. ggtitle -  Title of the graph 
-    6. ylab - y-label is the label of the continuous variable - median , which after flipping shows on the x-axis 
-    7. xab - x-label is the label of the grouped variable - State, which after flipping shows on the y-axis 
+*Parameters of plot :* 
+1. ggplot  
+   1. source dataset - beer.stateABV 
+   2. variables used - Brewery_State , ABV_per 
+   3. ordered by ABV_per using reorder   
+2. geom_bar - plots a barplot 
+   1. stat = identity : uses datavalues as visual values 
+   2. fill = color used to fill the bar plot 
+   3. width = width of the bars 
+3. coord_flip - owing to the large number of states( 50), flipped the plot to put the group on y-axis and plot the bars horizontally 
+4. theme_bw() - bw theme allows to create a white background and use black boxes around the graph 
+5. ggtitle -  Title of the graph 
+6. ylab - y-label is the label of the continuous variable - median , which after flipping shows on the x-axis 
+7. xab - x-label is the label of the grouped variable - State, which after flipping shows on the y-axis 
     
  
 
