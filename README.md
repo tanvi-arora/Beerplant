@@ -36,7 +36,7 @@ Main.Rmd                  | Tanvi Arora       | Anjli Solsi , Anne Francomani , 
 Code/BrewerCountByState.R | Anne Francomano   |
 Code/Compare_ABV_IBU.R    | Tanvi Arora       |
 Code/Max_ABV_IBU_State.R  | Tanvi Arora       |
-
+Code/Scatterplot_ABV_IBU.R| Rebecca Holsapple |
 
 ## Report :
 [Main.Rmd](https://github.com/tanvi-arora/Beerplant/blob/master/Main.Rmd)
