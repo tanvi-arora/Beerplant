@@ -12,6 +12,7 @@ library(knitr)
 #ensure that ggplot2 is loaded
 library(ggplot2)
 read_chunk('Code/load_dataset.R')
+read_chunk('Code/Column_NAs.R')
 read_chunk('Code/Merge_Beers_Breweries.R')
 read_chunk('Code/BreweryCountByState.R')
 read_chunk('Code/SummaryStatisticsForABV.R')
@@ -23,6 +24,11 @@ read_chunk('Code/Scatterplot_ABV_IBU.R')
 ```{r loaddataset, warning=FALSE}
 ```
 
+##NAs in Each Dataset
+```{r columnNAs, warning=FALSE}
+```
+
+##Merge Beer and Breweries Datasets
 ```{r mergedatasets, warning = FALSE}
 ```
 
