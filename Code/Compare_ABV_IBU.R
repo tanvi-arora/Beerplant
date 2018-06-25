@@ -9,14 +9,14 @@
 
 ## @knitr medianABVIBU
 # median of ABV per state
-beer.stateABV <- aggregate( ABV ~ Brewery_State, data=beer.breweries.state.clean , median)
+beer.stateABV <- aggregate( ABV ~ State_Name, data=beer.breweries.state , median)
 beer.stateABV$ABV_per <- beer.stateABV$ABV * 100
 
 # convert ABV value to percent
 
 head(beer.stateABV)
 # median of IBU per state
-beer.stateIBU <- aggregate( IBU ~ Brewery_State, data=beer.breweries.state.clean , median)
+beer.stateIBU <- aggregate( IBU ~ State_Name, data=beer.breweries.state , median)
 head(beer.stateIBU)
 
 
@@ -24,7 +24,11 @@ head(beer.stateIBU)
 ##  @knitr barplotABVIBU
 
 # barplot that maps median of ABV percentage per state 
-ggplot(beer.stateABV, aes(reorder(Brewery_State,ABV_per),ABV_per)) + geom_bar(stat="identity" , fill = "salmon" ,width = 0.5)  + coord_flip()  + theme_bw() + ggtitle("ABV% of beer vs State") + ylab("ABV Percentage")   + xlab("State")
+#ggplot(beer.stateABV, aes(reorder(Brewery_State,ABV_per),ABV_per)) + geom_bar(stat="identity" , fill = "salmon" ,width = 0.5)  + coord_flip()  + theme_bw() + ggtitle("ABV% of beer vs State") + ylab("ABV Percentage")   + xlab("State")
+
+ggplot(beer.stateABV, aes(reorder(State_Name,ABV_per),ABV_per)) + geom_bar(stat="identity" , fill = "salmon" ,width = 0.5)  + coord_flip()  + theme_bw() + ggtitle("ABV% of beer vs State") + ylab("ABV Percentage")   + xlab("State")
 
 # barplot that maps median of IBU per state
-ggplot(beer.stateIBU, aes(reorder(Brewery_State,IBU),IBU)) + geom_bar(stat="identity" , fill = "thistle" ,width = 0.5)  + coord_flip()  + theme_bw() + ggtitle("IBU of beer vs State") + ylab("IBU")   + xlab("State")
+#ggplot(beer.stateIBU, aes(reorder(Brewery_State,IBU),IBU)) + geom_bar(stat="identity" , fill = "thistle" ,width = 0.5)  + coord_flip()  + theme_bw() + ggtitle("IBU of beer vs State") + ylab("IBU")   + xlab("State")
+
+ggplot(beer.stateIBU, aes(reorder(State_Name,IBU),IBU)) + geom_bar(stat="identity" , fill = "thistle" ,width = 0.5)  + coord_flip()  + theme_bw() + ggtitle("IBU of beer vs State") + ylab("IBU")   + xlab("State")
