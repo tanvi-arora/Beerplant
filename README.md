@@ -15,7 +15,9 @@ Code is written in R . Below R packages will need to be installed -
 1) knitr 
 knitr package is used along with R markdown to share results and code in HTML format for reproducible research. 
 2) ggplot2 
-ggplot2 is a data visualization package for the statistical programming language R. Created by Hadley Wickham in 2005. 
+ggplot2 is a data visualization package for the statistical programming language R. Created by Hadley Wickham in 2005.
+3) scales 
+scale graphical scales map data to aesthetics, and provide methods for automatically determining breaks and labels for axes and legends in R. Created by Hadley Wickham in 2016. 
 
 Below R code installs above packages 
 
