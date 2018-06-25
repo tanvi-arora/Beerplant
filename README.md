@@ -5,7 +5,6 @@ Analysis on US Breweries
 
 This project analyses US Breweries to help with some What's for American Craft Beer.
 
-## System Configuration Details 
 
 ## Platform version : 
 R version 3.4.3 (2017-11-30) 
