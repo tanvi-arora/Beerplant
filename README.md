@@ -48,7 +48,7 @@ Code/Max_ABV_IBU_State.R  | Tanvi Arora       |
 Perform analysis on the US Breweries by regions 
 
 
-Authors :
+**Authors :**
 
 Anne Francomano  
 Anjli Solsi  
