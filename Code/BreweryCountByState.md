@@ -28,7 +28,7 @@ R package used is ggplot2
 *Parameters of plot :* 
 1. ggplot  
    1. source dataset - sortdescbybrewcount 
-   2. variables used - State, Brewery_Count
+   2. variables used - State_Name, Brewery_Count
    3. ordered by Brewery_Count using reorder   
 2. geom_bar - plots a barplot 
    1. stat = identity : uses datavalues as visual values 
