@@ -12,9 +12,9 @@
 
 ggplot(beer.breweries.state.clean, aes(beer.breweries.state.clean$ABV, beer.breweries.state.clean$IBU)) +
   geom_point(shape=18, color="maroon4")+
-  geom_point(aes(x= .0825, y = 32.5), color="red", size = 5)+
+  geom_point(aes(x= .0825, y = 32.5), color="darkblue", size = 5)+
   geom_smooth(method=lm,  linetype="dashed", color="forestgreen", fill="darkblue") +
   scale_color_gradient() +
   theme_bw() +
-  scale_x_continuous(label=percent) +
-  ggtitle("US IBU vs ABV%, with Customer Median Reference point (red)") + ylab("Bitterness of Beer(IBU)") + xlab("Alcohol Content Percent (ABV%)")
+  scale_x_continuous(labels = percent) +
+  ggtitle("US IBU vs ABV%, with Customer Median Reference point (dark blue)") + ylab("Bitterness of Beer(IBU)") + xlab("Alcohol Content Percent (ABV%)")

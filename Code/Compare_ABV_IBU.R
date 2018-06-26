@@ -7,28 +7,35 @@
 ################################################################
 
 
-## @knitr medianABVIBU
+## @knitr medianABV
 # median of ABV per state
 beer.stateABV <- aggregate( ABV ~ State_Name, data=beer.breweries.state , median)
+# convert ABV value to percent
 beer.stateABV$ABV_per <- beer.stateABV$ABV * 100
 
-# convert ABV value to percent
+# rename field names for beer.stateABV
+names(beer.stateABV) <- c("State_Name","Median_ABV","Median_ABV_Percentage")
 
+# display first few records for beer.stateABV
 head(beer.stateABV)
+
+## @knitr medianIBU
 # median of IBU per state
 beer.stateIBU <- aggregate( IBU ~ State_Name, data=beer.breweries.state , median)
+# rename field names for beer.stateIBU
+names(beer.stateIBU) <- c("State_Name","Median_IBU")
+
+# display first few records for beer.stateIBU
 head(beer.stateIBU)
 
 
 
-##  @knitr barplotABVIBU
+## @knitr barplotABVIBU
 
 # barplot that maps median of ABV percentage per state 
-#ggplot(beer.stateABV, aes(reorder(Brewery_State,ABV_per),ABV_per)) + geom_bar(stat="identity" , fill = "salmon" ,width = 0.5)  + coord_flip()  + theme_bw() + ggtitle("ABV% of beer vs State") + ylab("ABV Percentage")   + xlab("State")
 
-ggplot(beer.stateABV, aes(reorder(State_Name,ABV_per),ABV_per)) + geom_bar(stat="identity" , fill = "salmon" ,width = 0.5)  + coord_flip()  + theme_bw() + ggtitle("ABV% of beer vs State") + ylab("ABV Percentage")   + xlab("State")
+ggplot(beer.stateABV, aes(reorder(State_Name,Median_ABV_Percentage),Median_ABV_Percentage)) + geom_bar(stat="identity" , fill = "salmon" ,width = 0.5)  + coord_flip()  + theme_bw() + ggtitle(" Alcohol Content in US States") + ylab(" Median Alcohol Content(ABV) Percentage")   + xlab("US States")
 
 # barplot that maps median of IBU per state
-#ggplot(beer.stateIBU, aes(reorder(Brewery_State,IBU),IBU)) + geom_bar(stat="identity" , fill = "thistle" ,width = 0.5)  + coord_flip()  + theme_bw() + ggtitle("IBU of beer vs State") + ylab("IBU")   + xlab("State")
 
-ggplot(beer.stateIBU, aes(reorder(State_Name,IBU),IBU)) + geom_bar(stat="identity" , fill = "thistle" ,width = 0.5)  + coord_flip()  + theme_bw() + ggtitle("IBU of beer vs State") + ylab("IBU")   + xlab("State")
+ggplot(beer.stateIBU, aes(reorder(State_Name,Median_IBU),Median_IBU)) + geom_bar(stat="identity" , fill = "thistle" ,width = 0.5)  + coord_flip()  + theme_bw() + ggtitle(" Bitterness of Alcohol in US States") + ylab(" Median Bitterness of Alcohol(IBU)")   + xlab("US States")
