@@ -28,8 +28,9 @@ Below R code installs above packages
 ## Directory Structure  and important Files :
 1) README.md - Contains general information about the project and how to use it. 
 2) Main.Rmd - This is a cummulative report on the analysis . It references R code within this project wherever necessary to display the output. 
-3) Data - Data directory contains source files 
-4) Code - Code directory contains all R source code as *.R files and each R code has a codebook with its name saved as a *.md file
+3) Main.html - This is the html output of the Main.Rmd Rmarkdown file.
+4) Data - Data directory contains source files 
+5) Code - Code directory contains all R source code as *.R files and each R code has a codebook with its name saved as a *.md file
 
 
 ## Owners :
