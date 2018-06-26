@@ -22,7 +22,7 @@ scale graphical scales map data to aesthetics, and provide methods for automatic
 Below R code installs above packages 
 
 --install.packages(knitr) \
---install.packages(ggplot2) \ 
+--install.packages(ggplot2) \
 --install.packages(scales) \
 
 ## Directory Structure  and important Files :
