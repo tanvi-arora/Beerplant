@@ -3,7 +3,7 @@ Analysis on US Breweries
 
 ## Overview 
 
-This project analyses US Breweries to help with some What's for American Craft Beer.
+This project analyzes US Breweries by state with respect to Alcohol Content by Volume (ABV) and International Bitterness Units (IBU).
 
 
 ## Platform version : 
