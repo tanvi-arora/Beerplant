@@ -23,7 +23,7 @@ Below R code installs above packages
 
 --install.packages(knitr) \
 --install.packages(ggplot2) \
---install.packages(scales) \
+--install.packages(scales) 
 
 ## Directory Structure  and important Files :
 1) README.md - Contains general information about the project and how to use it. 
