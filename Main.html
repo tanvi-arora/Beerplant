@@ -136,9 +136,8 @@ library(knitr)</code></pre>
 <pre><code>## Warning: package 'knitr' was built under R version 3.4.4</code></pre>
 <pre class="r"><code>library(ggplot2)</code></pre>
 <pre><code>## Warning: package 'ggplot2' was built under R version 3.4.4</code></pre>
-<pre class="r"><code>library(scales)</code></pre>
-<pre><code>## Warning: package 'scales' was built under R version 3.4.4</code></pre>
-<pre class="r"><code># read external R source files
+<pre class="r"><code>library(scales)
+# read external R source files
 read_chunk('Code/load_dataset.R')
 read_chunk('Code/Column_NAs.R')
 read_chunk('Code/Merge_Beers_Breweries.R')
@@ -540,7 +539,7 @@ beer.stateIBU.sorted[1,c(&quot;Brewery_State&quot;,&quot;IBU&quot;)]</code></pre
 </div>
 <div id="scatterplot-of-ibu-vs-abv-for-us-breweries-with-de-halve-maan-median-reference-point" class="section level2">
 <h2>Scatterplot of IBU vs ABV% for US Breweries, with De Halve Maan Median Reference Point</h2>
-<p>Based on the below scatterplot of IBU vs ABV% for all US breweries, there seems to be a general positive relationship between the two characteristics. The reference point (in red) represents the plot of the median ABV% and IBU across all eight of De Halve Maan’s beers. The Belgian product line characteristics seem to fall within the range of the current US beer production. and it not an outlier.</p>
+<p>Based on the below scatterplot of IBU vs ABV% for all US breweries, there seems to be a general positive relationship between the two characteristics. The reference point (in dark blue) represents the plot of the median ABV% and IBU across all eight of De Halve Maan’s beers. The Belgian product line characteristics seem to fall within the range of the current US beer production. and it not an outlier.</p>
 <pre class="r"><code># Scatterplot of IBU vs ABV Percent, with Customer Median Reference Point (red), and a linar model and confidence interval
 
 ggplot(beer.breweries.state.clean, aes(beer.breweries.state.clean$ABV, beer.breweries.state.clean$IBU)) +

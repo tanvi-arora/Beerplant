@@ -111,7 +111,7 @@ Since Oregon has the maximum IBU of 138, far exceeding De Halve Maan's, there is
 
 ## Scatterplot of IBU vs ABV% for US Breweries, with De Halve Maan Median Reference Point
 Based on the below scatterplot of IBU vs ABV% for all US breweries, there seems to be a general positive relationship between the two characteristics.
-The reference point (in red) represents the plot of the median ABV% and IBU across all eight of De Halve Maan's beers. The Belgian product line characteristics seem to fall within the range of the current US beer production. and it not an outlier.
+The reference point (in dark blue) represents the plot of the median ABV% and IBU across all eight of De Halve Maan's beers. The Belgian product line characteristics seem to fall within the range of the current US beer production. and it not an outlier.
 
 ```{r scatterplotabvibu, warning = FALSE}
 ```
