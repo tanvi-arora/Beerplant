@@ -1,16 +1,19 @@
-Code book for Code/Scatterplot_ABV_IBU.R \
-Author : Rebecca Holsapple/
+### Code book for Code/Scatterplot_ABV_IBU.R 
+**Author:** Rebecca Holsapple
 R source code creating a scatterplot comparing IBU and ABV\
 
-source dataset :\
+**Source Dataset:**
 
-Beers.csv \
-Breweries.csv\
-project datasets used :\
+1. Beers.csv\
+2. Breweries.csv\
 
-beer.breweries.state.clean\
+**Project Datasets Used:**
 
-objects created : No objects were created\
+beer.breweries.state.clean
+
+**Objects Created:** No objects were created
+
+**Functions Used:**
 
 ggplot\
 variables used - IBU and ABV\
