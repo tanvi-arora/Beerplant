@@ -1,11 +1,12 @@
 ### Code book for Code/Scatterplot_ABV_IBU.R 
 **Author:** Rebecca Holsapple
-R source code creating a scatterplot comparing IBU and ABV\
+
+R source code creating a scatterplot comparing IBU and ABV
 
 **Source Dataset:**
 
-1. Beers.csv\
-2. Breweries.csv\
+1. Beers.csv
+2. Breweries.csv
 
 **Project Datasets Used:**
 
@@ -22,4 +23,4 @@ geom_point - changed the observations imensions and color\
 geom_point - added the customer's median IBU and ABV\
 geom_smooth - added the linar model with confidence interval\
 scale_x_continuous - change the x-axis to percentage\
-ggtitle - Title of the graph\
+ggtitle - Title of the graph
