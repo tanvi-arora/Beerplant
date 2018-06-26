@@ -11,14 +11,15 @@
 #change column names 
 colnames(beer) <- c("Beer_Name", "Beer_ID", "ABV", "IBU", "Brewery_ID", "Style", "Ounces")
 colnames(breweries) <- c("Brewery_ID", "Brewery_Name", "Brewery_City", "Brewery_State")
-str(beer)
-str(breweries)
+names(beer)
+names(breweries)
 
 #report number of NAs in beer and breweries dataset
 colSums(is.na(beer))
 colSums(is.na(breweries))
-#which is used to identify the records with blank values for the variable Style in the beer dataset
-beer[which(beer$Style==''),]
+#identify the records with blank values for the variable Style in the beer dataset
+#beer[which(beer$Style==''),]
+length(which(beer$Style==''))
 
 #merge beer dataset and breweries dataset
 ##beer.breweries <- merge(beer, breweries, by=c("Brewery_ID"), all=TRUE)

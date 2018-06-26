@@ -11,10 +11,11 @@ Here, in phase one of the investigation, we look at two key beer product line ch
 
 ```{r setup, include=TRUE}
 knitr::opts_chunk$set(echo = TRUE, cache = FALSE , warning=FALSE)
-#
+# ensure below packages are installed in R
 library(knitr)
-#ensure that ggplot2 is loaded
 library(ggplot2)
+library(scales)
+# read external R source files
 read_chunk('Code/load_dataset.R')
 read_chunk('Code/Column_NAs.R')
 read_chunk('Code/Merge_Beers_Breweries.R')
@@ -29,10 +30,41 @@ read_chunk('Code/Scatterplot_ABV_IBU.R')
 The two data sets utilized in the analyses were obtained from iBeverage, Inc., in NY. One data set listed 558 breweries encompassing all 51 US states. The second data set reflects all 2410 beers brewed by each US brewery in the first data set. In order to perform a portion of the analysis it was necessary to merge the two data sets.  
 
 
-```{r loaddataset, warning=FALSE}
+```{r loadbeerdataset, warning=FALSE}
+```
+Original Beer dataset contains following information -
+
+Name: Name of the beer. \
+Beer_ID: Unique identifier of the beer. \
+ABV: Alcohol by volume of the beer. \
+IBU: International Bitterness Units of the beer. \
+Brewery_id: Brewery id associated with the beer. \
+Style: Style of the beer. \
+Ounces: Ounces of beer. \
+
+```{r loadbrewdataset, warning=FALSE}
 ```
 
-#Missing Values
+Original Breweries dataset contains following information -
+
+Brew_ID: Unique identifier of the brewery. \
+Name: Name of the brewery. \
+City: City where the brewery is located. \
+State: U.S. State where the brewery is located. \
+
+```{r loadstatedataset, warning=FALSE}
+```
+
+State dataset is created from available R datasets -
+
+State : dataset state.abb , is the 2 character ISO state code \
+State_Name : dataset state.name , is the full name of the state \
+State_Region : dataset state.region , is the region the state belongs to \
+
+
+
+#Data Description
+
 Once the data was obtained and reviewed for completeness, it was determined that out of all 2410 US beers, 3%  were missing the ABV measure, 42% were missing the IBU measure, 0.02% were missing Style information.  As requested by De Halve Maan, missing data was ignored and the analysis was performed on the available information.
 
 ```{r columnNAs, warning=FALSE}
@@ -57,12 +89,16 @@ The mean and median ABV for De Halve Maan's product line are both approximately 
 ```{r summarystatsabv, warning = FALSE}
 ```
 
+```{r medianABV, warning = FALSE}
+```
+
 ## IBU
 An individual beer's IBU contributes to its unique taste and depth. Although there may be more competition in areas that sell similar IBU levels, this may reflect the population at large being attracted to that specific quality of beer. Based on the below chart showing Median IBU by US State, De Halve Maan's median IBU of 32.5 falls approximately in the middle of the US breweries.
-```{r medianABVIBU, warning = FALSE}
+```{r medianIBU, warning = FALSE}
 ```
-***BOTH CHART LABELS and TITLES SHOULD be  MEDIAN 
+
 ## Plots:   Median ABV by State   and Median IBU by State
+
 ```{r barplotABVIBU, warning = FALSE}
 ```
 

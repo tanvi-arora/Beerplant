@@ -7,25 +7,11 @@
 
 ## @knitr mergedatasets
 
-#change column names for commonality 
-colnames(beer) <- c("Beer_Name", "Beer_ID", "ABV", "IBU", "Brewery_ID", "Style", "Ounces")
-colnames(breweries) <- c("Brewery_ID", "Brewery_Name", "Brewery_City", "Brewery_State")
-str(beer)
-str(breweries)
-
 #Remove leading spaces from  Brewery_State data in breweries dataset
 #create a function to remove leading or trailing whitespaces
 trim <- function(x) gsub("^\\s|\\s+$","",x)
 
 breweries$Brewery_State1 <- trim(breweries$Brewery_State)
-
-#create state information dataset using available R dataset
-state.info <- cbind.data.frame(state.abb, state.name, state.region)
-names(state.info) <- c("State", "State_Name", "State_Region")
-
-#validate state.info dataset created correctly
-str(state.info)
-dim(state.info)
 
 #merge beer dataset and breweries dataset
 beer.breweries <- merge(beer, breweries, by=c("Brewery_ID"), all=TRUE)
@@ -49,3 +35,6 @@ summary(beer.breweries.state)
 
 #final dataset
 beer.breweries.state.clean <- beer.breweries
+
+#merge breweries with the state information dataset 
+breweries.state <- merge(breweries, state.info, by.x="Brewery_State1", by.y="State", all = TRUE)
