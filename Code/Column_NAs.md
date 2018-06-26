@@ -21,4 +21,4 @@ No objects were created
 2. *colSums()*: sum columns for numeric arrays or data frames  
 2. *is.na()*: indicate which elements are missing 
 3. *length()*, *which()*: get the length of an object, used to identify the condition noted within the function in the dataset
-         Since the missing values for the variable Style are not NA, this function is used to identify and count the blank values.
+	Since the missing values for the variable Style are not NA, this function is used to identify and count the blank values.
