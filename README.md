@@ -34,14 +34,16 @@ Below R code installs above packages
 
 
 ## Owners :
-Files                     | Created By        | Modified By
---------------------------|-------------------|----------------
-README.md                 | Tanvi Arora       |
-Main.Rmd                  | Tanvi Arora       | Anjli Solsi , Anne Francomani , Rebecca Holsapple
-Code/BrewerCountByState.R | Anne Francomano   |
-Code/Compare_ABV_IBU.R    | Tanvi Arora       |
-Code/Max_ABV_IBU_State.R  | Tanvi Arora       |
-Code/Scatterplot_ABV_IBU.R| Rebecca Holsapple |
+Files                       | Created By        | Modified By
+----------------------------|-------------------|----------------
+README.md                   | Tanvi Arora       |
+Main.Rmd                    | Tanvi Arora       | Anjli Solsi , Anne Francomani , Rebecca Holsapple
+Code/Column_NAs.R           | Anjli Solsi       | 
+Code/Merge_Beers_Breweries.R| Anjli Solsi       |
+Code/BreweryCountByState.R  | Anne Francomano   |
+Code/Compare_ABV_IBU.R      | Tanvi Arora       |
+Code/Max_ABV_IBU_State.R    | Tanvi Arora       |
+Code/Scatterplot_ABV_IBU.R  | Rebecca Holsapple |
 
 ## Report :
 [Main.Rmd](https://github.com/tanvi-arora/Beerplant/blob/master/Main.Rmd)
