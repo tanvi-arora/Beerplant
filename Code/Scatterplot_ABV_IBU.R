@@ -10,7 +10,7 @@
 
 # Scatterplot of IBU vs ABV Percent, with Customer Median Reference Point (red), and a linar model and confidence interval
 
-ggplot(beer.breweries.state.clean, aes(beer.breweries.state.clean$ABV, beer.breweries.state.clean$IBU)) +
+IBU.ABV.relation <- ggplot(beer.breweries.state.clean, aes(beer.breweries.state.clean$ABV, beer.breweries.state.clean$IBU)) +
   geom_point(shape=18, color="maroon4")+
   geom_point(aes(x= .0825, y = 32.5), color="darkblue", size = 5)+
   geom_smooth(method=lm,  linetype="dashed", color="forestgreen", fill="darkblue") +
